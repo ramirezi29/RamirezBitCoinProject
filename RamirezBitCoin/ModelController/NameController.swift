@@ -32,7 +32,6 @@ class NameController {
         return url
     }
     
-    
     func saveToPersistentStorage() {
         let encoder = JSONEncoder()
         do {
