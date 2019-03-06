@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum NetworkingError: Error {
+    case badBaseURL(String)
+    case forwardedError(Error)
+    case invalidData(String)
+    case badBuiltURL(String)
+}
