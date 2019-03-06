@@ -16,15 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        BitcoinValueController.fetchBitcoin(with: "BTCEUR") { (bitcoin, _) in
-            if bitcoin != nil {
-                guard let bitcoin = bitcoin else {
-                    return
-                }
-                print(bitcoin.ask)
-            }
+        window = UIWindow()
+
+        let isOnboarded = UserDefaults.standard.bool(forKey: Constants.storyBoardConstants.isOnBoardedKey)
+
+        if isOnboarded {
+            let storyboard = UIStoryboard(name: Constants.storyBoardConstants.homeScreenStoryBoard, bundle: nil)
+            window?.rootViewController = storyboard.instantiateInitialViewController()
+        } else {
+            let storyboard = UIStoryboard(name: Constants.storyBoardConstants.signInStoryBoard, bundle: nil)
+            window?.rootViewController = storyboard.instantiateInitialViewController()
         }
-        
+
+        window?.makeKeyAndVisible()
+
         return true
     }
 

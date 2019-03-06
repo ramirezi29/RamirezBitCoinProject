@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4733ADA82230249300804465 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733ADA72230249300804465 /* Constants.swift */; };
+		4733ADAB223025FF00804465 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4733ADA9223025FF00804465 /* SignIn.storyboard */; };
 		4764BFFB222F65A1001D6DC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764BFFA222F65A1001D6DC1 /* AppDelegate.swift */; };
 		4764C000222F65A1001D6DC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4764BFFE222F65A1001D6DC1 /* Main.storyboard */; };
 		4764C002222F65A5001D6DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4764C001222F65A5001D6DC1 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4733ADA72230249300804465 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4733ADAA223025FF00804465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RamirezBitCoin/View/Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
 		4764BFF7222F65A1001D6DC1 /* RamirezBitCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamirezBitCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4764BFFA222F65A1001D6DC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4764BFFF222F65A1001D6DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				4764C001222F65A5001D6DC1 /* Assets.xcassets */,
 				4764C006222F65A5001D6DC1 /* Info.plist */,
 				4764C01D222FAA23001D6DC1 /* IRButton.swift */,
+				4733ADA72230249300804465 /* Constants.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4764C003222F65A5001D6DC1 /* LaunchScreen.storyboard */,
+				4733ADA9223025FF00804465 /* SignIn.storyboard */,
 				4764BFFE222F65A1001D6DC1 /* Main.storyboard */,
 			);
 			path = View;
@@ -194,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4733ADAB223025FF00804465 /* SignIn.storyboard in Resources */,
 				4764C005222F65A5001D6DC1 /* LaunchScreen.storyboard in Resources */,
 				4764C002222F65A5001D6DC1 /* Assets.xcassets in Resources */,
 				4764C000222F65A1001D6DC1 /* Main.storyboard in Resources */,
@@ -208,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4764C01B222F99B0001D6DC1 /* BitcoinValue.swift in Sources */,
+				4733ADA82230249300804465 /* Constants.swift in Sources */,
 				4764C022222FAD95001D6DC1 /* BitcoinVC.swift in Sources */,
 				4764C01E222FAA23001D6DC1 /* IRButton.swift in Sources */,
 				4764C020222FAD83001D6DC1 /* SignInVC.swift in Sources */,
@@ -223,6 +231,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4733ADA9223025FF00804465 /* SignIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4733ADAA223025FF00804465 /* Base */,
+			);
+			name = SignIn.storyboard;
+			sourceTree = "<group>";
+		};
 		4764BFFE222F65A1001D6DC1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
