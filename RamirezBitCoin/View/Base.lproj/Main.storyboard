@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GFB-jJ-9pM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GFB-jJ-9pM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.43"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -135,7 +135,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="voO-0e-NWl">
-                                <rect key="frame" x="67" y="481" width="241" height="90"/>
+                                <rect key="frame" x="67" y="347.5" width="241" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="UfB-Jt-uJf"/>
                                     <constraint firstAttribute="width" constant="241" id="oJe-st-4bp"/>
@@ -153,7 +153,7 @@
                             <constraint firstItem="dxz-Tt-3r4" firstAttribute="top" secondItem="slM-Lu-KYa" secondAttribute="bottom" constant="16" id="G73-re-fX7"/>
                             <constraint firstItem="2TD-Ge-488" firstAttribute="bottom" secondItem="slM-Lu-KYa" secondAttribute="bottom" constant="425" id="O9S-79-VqK"/>
                             <constraint firstItem="2TD-Ge-488" firstAttribute="bottom" secondItem="iFd-qE-MsD" secondAttribute="bottom" constant="351.33333333333331" id="TUX-xP-5s8"/>
-                            <constraint firstItem="voO-0e-NWl" firstAttribute="top" secondItem="2TD-Ge-488" secondAttribute="top" constant="417" id="X04-Yw-W0V"/>
+                            <constraint firstItem="voO-0e-NWl" firstAttribute="top" secondItem="dxz-Tt-3r4" secondAttribute="bottom" constant="32" id="UZg-K1-zfq"/>
                             <constraint firstItem="2TD-Ge-488" firstAttribute="bottom" secondItem="PXO-I1-aIA" secondAttribute="bottom" constant="435" id="YCf-Lk-qmG"/>
                             <constraint firstItem="PXO-I1-aIA" firstAttribute="width" secondItem="TRz-2V-XFU" secondAttribute="width" multiplier="0.8" id="bSa-AK-jKw"/>
                             <constraint firstItem="voO-0e-NWl" firstAttribute="leading" secondItem="2TD-Ge-488" secondAttribute="leading" constant="67" id="bia-cY-adK"/>
@@ -161,7 +161,6 @@
                             <constraint firstItem="slM-Lu-KYa" firstAttribute="top" secondItem="PXO-I1-aIA" secondAttribute="bottom" constant="8" symbolic="YES" id="iM9-xR-TeU"/>
                             <constraint firstItem="jQ3-sa-8X4" firstAttribute="top" secondItem="2TD-Ge-488" secondAttribute="top" constant="53" id="qQC-Qm-40z"/>
                             <constraint firstItem="slM-Lu-KYa" firstAttribute="leading" secondItem="TRz-2V-XFU" secondAttribute="leading" constant="20" id="ufk-6R-VgW"/>
-                            <constraint firstItem="2TD-Ge-488" firstAttribute="bottom" secondItem="voO-0e-NWl" secondAttribute="bottom" constant="96" id="v30-Jm-YNm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2TD-Ge-488"/>
                     </view>
@@ -220,7 +219,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coin" width="44.792224884033203" height="44.792224884033203"/>
+        <image name="coin" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5qs-De-DXa"/>
