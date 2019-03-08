@@ -10,7 +10,7 @@ import UIKit
 
 enum ColorController {
     
-    case buttonColor
+    case offWhite
     case softGreen
     case goldenYellow
     case richGold
@@ -24,12 +24,12 @@ extension ColorController {
     var value: UIColor {
         get {
             switch self {
-            case .buttonColor:
+            case .offWhite:
                 return UIColor(red: 229/255, green: 246/255, blue: 255/255, alpha: 1.0)
             case .softGreen:
                 return UIColor(red: 95/255, green: 148/255, blue: 93/255, alpha: 1.0)
             case .goldenYellow:
-                 return UIColor(red: 244/255, green: 218/255, blue: 83/255, alpha: 1.0)
+                return UIColor(red: 244/255, green: 218/255, blue: 83/255, alpha: 1.0)
             case .richGold:
                 return UIColor(red: 252/255, green: 198/255, blue: 45/255, alpha: 1.0)
             case .lightGreen:

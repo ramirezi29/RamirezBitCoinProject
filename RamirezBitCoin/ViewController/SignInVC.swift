@@ -71,8 +71,6 @@ class SignInVC: UIViewController {
         return true
     }
     
-    
-    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,7 +86,7 @@ class SignInVC: UIViewController {
 
 extension SignInVC {
     func userNameErrorAlert() {
-        let userNameErrorAlertMessage = AlertController.presentAlertControllerWith(alertTitle:"Invalid Username" , alertMessage: "Username can not be left blank, please enter in a valid username", dismissActionTitle: "OK")
+        let userNameErrorAlertMessage = AlertController.presentAlertControllerWith(alertTitle:"Invalid Username" , alertMessage: "Username can not be empty, please enter a valid username and try again", dismissActionTitle: "OK")
         DispatchQueue.main.async {
             self.present(userNameErrorAlertMessage, animated: true, completion: nil)
         }

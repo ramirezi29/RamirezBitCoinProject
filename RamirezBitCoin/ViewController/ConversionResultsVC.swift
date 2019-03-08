@@ -10,6 +10,7 @@ import UIKit
 
 class ConversionResultsVC: UIViewController {
     
+    @IBOutlet weak var coinImageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var activityIndicatorView: UIView!
     @IBOutlet weak var headingLabel: UILabel!
@@ -27,16 +28,19 @@ class ConversionResultsVC: UIViewController {
         activityIndicator.color = ColorController.darkBlue.value
         showActivityIndicator()
         view.addVerticalGradientLayer()
+        self.coinImageView.alpha = 0
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        clearValueLabels()
+        clearBCValueLabel()
+        
+        // NOTE: - Observer detects when the app enters the background and calls popViewController in the completion block
+        
         NotificationCenter.default.removeObserver(self)
         observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: .main) { [ self] notification in
             self.navigationController?.popViewController(animated: false)
         }
-        
         headingLabel.text = "Current Bitcoin Value"
         
         guard let currencyValue = currencyValue,
@@ -44,7 +48,7 @@ class ConversionResultsVC: UIViewController {
                 return
         }
         
-        // NOTE: - The network call is fed a string value from the previous view controller 
+        // NOTE: - The network call is fed a string value from the previous view controller and placed at the end of the appending path component
         
         BitcoinValueController.fetchBitcoin(with: currencyValue) { (bitcoin, _) in
             if bitcoin != nil {
@@ -65,12 +69,22 @@ class ConversionResultsVC: UIViewController {
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        clearValueLabels()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        coinImageView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.coinImageView.alpha = 1
+            self.coinImageView.transform = .identity
+        }, completion: nil)
     }
     
-    func clearValueLabels() {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        clearBCValueLabel()
+    }
+    
+    func clearBCValueLabel() {
         currencyValueLabel.text = ""
     }
     
@@ -86,11 +100,6 @@ class ConversionResultsVC: UIViewController {
             self.activityIndicator.startAnimating()
             self.activityIndicator.isHidden = false
         }
-    }
-    
-    
-    @objc func appMovedToForeground() {
-        print("App moved to ForeGround!")
     }
 }
 

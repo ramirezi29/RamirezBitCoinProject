@@ -12,7 +12,7 @@ class BitcoinValueController {
     
     static let baseURL = URL(string: "https://apiv2.bitcoinaverage.com")
     
-    static func fetchBitcoin(with localCurrency: String, completion: @escaping (BitcoinValue?, NetworkingError?) -> Void) {
+    static func fetchBitcoin(with currencyType: String, completion: @escaping (BitcoinValue?, NetworkingError?) -> Void) {
         
         guard var url = baseURL else {
             completion(nil, .badBaseURL("Error with base URL"))
@@ -22,7 +22,7 @@ class BitcoinValueController {
         url.appendPathComponent("indices")
         url.appendPathComponent("global")
         url.appendPathComponent("ticker")
-        url.appendPathComponent(localCurrency)
+        url.appendPathComponent(currencyType)
         
         let components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         
@@ -33,7 +33,7 @@ class BitcoinValueController {
         
         URLSession.shared.dataTask(with: builtURL) { (data, _, error) in
             if let error = error {
-                print("\nThere was an error with dataTask getting the launches from the endpoint in: \(#file)\n\(#function);\n\(error);\n\(error.localizedDescription)\n"); completion(nil, .forwardedError(error))
+                print("\nThere was an error with dataTask getting the bitcoin value from the endpoint in: \(#file)\n\(#function);\n\(error);\n\(error.localizedDescription)\n"); completion(nil, .forwardedError(error))
                 return
             }
             
@@ -47,7 +47,7 @@ class BitcoinValueController {
                 let fetchedBitcoinValue = try jsonDecoder.decode(BitcoinValue.self, from: data)
                 completion(fetchedBitcoinValue, nil)
             } catch {
-                print("\nThere was an error with decoding the data  in: \(#file)\n \(#function);\n\(error);\n\(error.localizedDescription)\n")
+                print("\nThere was an error decoding the data in: \(#file)\n \(#function);\n\(error);\n\(error.localizedDescription)\n")
                 completion(nil, .forwardedError(error))
                 return
             }
