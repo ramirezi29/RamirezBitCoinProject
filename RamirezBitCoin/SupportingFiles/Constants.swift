@@ -17,7 +17,7 @@ struct Constants {
     }
     
     struct UserDefaults {
-       static let isOnboardedKey = "hasSignedIn"
+        static let isOnboardedKey = "hasSignedIn"
     }
     
     struct SegueID {

@@ -17,13 +17,15 @@ class NameController {
         loadFromPersistenctStorage()
     }
     
+    // NOTE: - Implementing JSON Persistence the user’s name is able to be stored locally on the user’s device and later retrieved with loadFromPersistenctStorage
+    
     func createUser(with name: String) {
         let newUser = Name(name: name)
         names.append(newUser)
         saveToPersistentStorage()
     }
     
-    // MARK: - Persistent Storage
+    // MARK: - JSON Persistent Storage
     
     func filePath() -> URL {
         let fileManager = FileManager.default
@@ -41,9 +43,11 @@ class NameController {
             print(String(data: data, encoding: .utf8)!)
             try data.write(to: filePath())
         } catch let error {
-            print("🚀 There was an error in \(#function); \(error); \(error.localizedDescription)")
+            print("There was an error in \(#function); \(error); \(error.localizedDescription)")
         }
     }
+    
+    // NOTE: - loadFromPersistenctStorage will throw an error on initial sign in due to the name.json file not having been created yet
     
     func loadFromPersistenctStorage() {
         let decoder = JSONDecoder()
@@ -52,7 +56,7 @@ class NameController {
             let names = try decoder.decode([Name].self, from: data)
             self.names = names
         } catch let error {
-            print("🚀 There was an error in \(#function); \(error); \(error.localizedDescription) 🚀")
+            print("There was an error in \(#function); \(error); \(error.localizedDescription)")
         }
     }
 }

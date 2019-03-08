@@ -15,7 +15,7 @@ extension UIView {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
         gradient.colors = [
-            ColorController.buttonColor.value.cgColor,
+            ColorController.offWhite.value.cgColor,
             ColorController.darkBlue.value.cgColor
         ]
         gradient.locations = [0.0, 1.0]
