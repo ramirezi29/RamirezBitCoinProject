@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0gX-MO-gnR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6uD-yu-MbO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,55 +11,76 @@
     </dependencies>
     <scenes>
         <!--Sign InVC-->
-        <scene sceneID="ihf-sv-F1C">
+        <scene sceneID="7nw-RH-LNn">
             <objects>
-                <viewController storyboardIdentifier="SignIn" id="0gX-MO-gnR" customClass="SignInVC" customModule="RamirezBitCoin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="27f-lh-16x">
+                <viewController storyboardIdentifier="SignIn" id="6uD-yu-MbO" customClass="SignInVC" customModule="RamirezBitCoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LbV-mf-Z13">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-01-gXd">
-                                <rect key="frame" x="16" y="143" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-Mm-Vwh">
+                                <rect key="frame" x="37" y="140" width="300" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdq-qm-keM">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-0k-ChN">
+                                        <rect key="frame" x="129" y="0.0" width="171" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHA-Vu-46Q" customClass="IRButton" customModule="RamirezBitCoin" customModuleProvider="target">
+                                <rect key="frame" x="128" y="298" width="118" height="50"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <segue destination="6xc-Rg-3uA" kind="show" identifier="loginSegue" id="du6-Qi-E59"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a profile to get started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-rs-fc1">
+                                <rect key="frame" x="37" y="64" width="300" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T1K-Ac-ud8">
-                                <rect key="frame" x="118" y="143" width="217" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ru3-Mo-Teh" customClass="IRButton" customModule="RamirezBitCoin" customModuleProvider="target">
-                                <rect key="frame" x="164" y="318" width="47" height="30"/>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <action selector="singInButtonTapped:" destination="0gX-MO-gnR" eventType="touchUpInside" id="6do-iO-FWC"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Kr2-5f-zgY" firstAttribute="bottom" secondItem="Ru3-Mo-Teh" secondAttribute="bottom" constant="319" id="9WM-Ss-DDl"/>
-                            <constraint firstItem="Ru3-Mo-Teh" firstAttribute="centerY" secondItem="27f-lh-16x" secondAttribute="centerY" id="Av1-Er-7rZ"/>
-                            <constraint firstItem="hE6-01-gXd" firstAttribute="leading" secondItem="27f-lh-16x" secondAttribute="leadingMargin" id="KKr-4j-cM4"/>
-                            <constraint firstItem="Kr2-5f-zgY" firstAttribute="bottom" secondItem="T1K-Ac-ud8" secondAttribute="bottom" constant="494" id="KaD-3t-qkM"/>
-                            <constraint firstItem="Ru3-Mo-Teh" firstAttribute="centerX" secondItem="27f-lh-16x" secondAttribute="centerX" id="Pkq-Pe-p8F"/>
-                            <constraint firstItem="Kr2-5f-zgY" firstAttribute="trailing" secondItem="T1K-Ac-ud8" secondAttribute="trailing" constant="40" id="WZ5-Rw-d29"/>
-                            <constraint firstItem="T1K-Ac-ud8" firstAttribute="leading" secondItem="Kr2-5f-zgY" secondAttribute="leading" constant="118" id="t9O-je-B1q"/>
-                            <constraint firstItem="hE6-01-gXd" firstAttribute="top" secondItem="T1K-Ac-ud8" secondAttribute="top" id="z9S-L1-tTz"/>
+                            <constraint firstItem="i8G-Mm-Vwh" firstAttribute="leading" secondItem="2y1-qG-C7q" secondAttribute="leading" constant="37" id="MnZ-VQ-tpA"/>
+                            <constraint firstItem="SOf-rs-fc1" firstAttribute="width" secondItem="LbV-mf-Z13" secondAttribute="width" multiplier="0.8" id="XCV-sc-rQR"/>
+                            <constraint firstItem="2y1-qG-C7q" firstAttribute="trailing" secondItem="wHA-Vu-46Q" secondAttribute="trailing" constant="129" id="XlJ-1j-FkB"/>
+                            <constraint firstItem="SOf-rs-fc1" firstAttribute="leading" secondItem="2y1-qG-C7q" secondAttribute="leading" constant="37" id="fBu-uV-jFY"/>
+                            <constraint firstItem="wHA-Vu-46Q" firstAttribute="leading" secondItem="2y1-qG-C7q" secondAttribute="leading" constant="128" id="g2a-zd-5Ij"/>
+                            <constraint firstItem="2y1-qG-C7q" firstAttribute="bottom" secondItem="i8G-Mm-Vwh" secondAttribute="bottom" constant="494" id="gh6-vN-Xdi"/>
+                            <constraint firstItem="i8G-Mm-Vwh" firstAttribute="width" secondItem="LbV-mf-Z13" secondAttribute="width" multiplier="0.8" id="tZO-W4-JYA"/>
+                            <constraint firstItem="SOf-rs-fc1" firstAttribute="top" secondItem="2y1-qG-C7q" secondAttribute="top" constant="44" id="wc6-uH-itR"/>
+                            <constraint firstItem="2y1-qG-C7q" firstAttribute="bottom" secondItem="wHA-Vu-46Q" secondAttribute="bottom" constant="319" id="xGz-LH-Ih0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Kr2-5f-zgY"/>
+                        <viewLayoutGuide key="safeArea" id="2y1-qG-C7q"/>
                     </view>
                     <connections>
-                        <outlet property="nameTextField" destination="T1K-Ac-ud8" id="Ob0-bt-ynG"/>
-                        <outlet property="signInButton" destination="Ru3-Mo-Teh" id="HUS-Jq-1bv"/>
-                        <outlet property="welcomeLabel" destination="hE6-01-gXd" id="R5o-r0-e0Q"/>
+                        <outlet property="nameTextField" destination="MZY-0k-ChN" id="r0k-F1-TEb"/>
+                        <outlet property="signInButton" destination="wHA-Vu-46Q" id="GP5-qo-MEu"/>
+                        <outlet property="welcomeLabel" destination="Tdq-qm-keM" id="qm9-ai-B0z"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="69N-NQ-AE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2t-6G-IOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-306.39999999999998" y="149.77511244377811"/>
+        </scene>
+        <!--UIViewController-7QS-7S-cZk-->
+        <scene sceneID="yZc-mO-De1">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-7QS-7S-cZk" storyboardName="Main" referencedIdentifier="UIViewController-7QS-7S-cZk" id="6xc-Rg-3uA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seu-Zk-Bxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="149.77511244377811"/>
         </scene>
     </scenes>
 </document>

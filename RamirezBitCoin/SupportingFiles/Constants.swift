@@ -9,6 +9,7 @@
 import Foundation
 
 struct Constants {
+    
     struct storyBoardConstants {
         static let isOnBoardedKey = "hasSignedIn"
         static let signInStoryBoard = "SignIn"
@@ -17,5 +18,20 @@ struct Constants {
     
     struct UserDefaults {
        static let isOnboardedKey = "hasSignedIn"
+    }
+    
+    struct SegueID {
+        static let usdSegueKey = "usdSegue"
+        static let idrSegueKey = "idrSegue"
+        static let gbpSegueKey = "gbpSegue"
+        static let eurSegueKey = "eurSegue"
+        static let loginSegueKey = "loginSegue"
+    }
+    
+    struct CurrencyTYpe {
+        static let usd = "USD"
+        static let idr = "IDR"
+        static let gpd = "GBP"
+        static let eur = "EUR"
     }
 }

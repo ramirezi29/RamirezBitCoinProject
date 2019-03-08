@@ -12,8 +12,6 @@ class BitcoinValueController {
     
     static let baseURL = URL(string: "https://apiv2.bitcoinaverage.com")
     
-    private init(){}
-    
     static func fetchBitcoin(with localCurrency: String, completion: @escaping (BitcoinValue?, NetworkingError?) -> Void) {
         
         guard var url = baseURL else {
@@ -32,9 +30,6 @@ class BitcoinValueController {
             completion(nil, .badBuiltURL("Error with the built URL"))
             return
         }
-        
-        // NOTE: - Test Print
-        //print("\nThis is the Built URL: \(builtURL)\n")
         
         URLSession.shared.dataTask(with: builtURL) { (data, _, error) in
             if let error = error {
