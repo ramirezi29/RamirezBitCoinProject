@@ -9,5 +9,6 @@
 import Foundation
 
 struct BitcoinValue: Decodable {
+    
     var ask: Double
 }

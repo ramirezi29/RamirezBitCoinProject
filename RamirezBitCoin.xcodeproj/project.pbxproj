@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470A6FFF2231BFEC00F43D53 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A6FFE2231BFEC00F43D53 /* Currency.swift */; };
 		4733ADA82230249300804465 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733ADA72230249300804465 /* Constants.swift */; };
-		4733ADAB223025FF00804465 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4733ADA9223025FF00804465 /* SignIn.storyboard */; };
 		4764BFFB222F65A1001D6DC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764BFFA222F65A1001D6DC1 /* AppDelegate.swift */; };
 		4764C000222F65A1001D6DC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4764BFFE222F65A1001D6DC1 /* Main.storyboard */; };
 		4764C002222F65A5001D6DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4764C001222F65A5001D6DC1 /* Assets.xcassets */; };
@@ -22,11 +22,15 @@
 		4764C020222FAD83001D6DC1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764C01F222FAD83001D6DC1 /* SignInVC.swift */; };
 		4764C022222FAD95001D6DC1 /* BitcoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764C021222FAD95001D6DC1 /* BitcoinVC.swift */; };
 		4764C024222FAFBF001D6DC1 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764C023222FAFBF001D6DC1 /* AlertController.swift */; };
+		477B1FCD2231020F0040BC26 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477B1FCB2231020F0040BC26 /* SignIn.storyboard */; };
+		477B1FD322310E250040BC26 /* ConversionResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B1FD222310E250040BC26 /* ConversionResultsVC.swift */; };
+		4780D2372232475400533634 /* ColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780D2362232475400533634 /* ColorController.swift */; };
+		4780D239223249FF00533634 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780D238223249FF00533634 /* GradientBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		470A6FFE2231BFEC00F43D53 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		4733ADA72230249300804465 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4733ADAA223025FF00804465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RamirezBitCoin/View/Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
 		4764BFF7222F65A1001D6DC1 /* RamirezBitCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamirezBitCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4764BFFA222F65A1001D6DC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4764BFFF222F65A1001D6DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +46,10 @@
 		4764C01F222FAD83001D6DC1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		4764C021222FAD95001D6DC1 /* BitcoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinVC.swift; sourceTree = "<group>"; };
 		4764C023222FAFBF001D6DC1 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		477B1FCC2231020F0040BC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RamirezBitCoin/View/Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
+		477B1FD222310E250040BC26 /* ConversionResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResultsVC.swift; sourceTree = "<group>"; };
+		4780D2362232475400533634 /* ColorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorController.swift; sourceTree = "<group>"; };
+		4780D238223249FF00533634 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +86,7 @@
 				4764C010222F886F001D6DC1 /* ViewController */,
 				4764C00F222F8860001D6DC1 /* ModelController */,
 				4764C00E222F8858001D6DC1 /* Model */,
-				4764C00D222F8851001D6DC1 /* Resources */,
+				4764C00D222F8851001D6DC1 /* Utilities */,
 				4764C00C222F8829001D6DC1 /* SupportingFiles */,
 			);
 			path = RamirezBitCoin;
@@ -90,19 +98,20 @@
 				4764BFFA222F65A1001D6DC1 /* AppDelegate.swift */,
 				4764C001222F65A5001D6DC1 /* Assets.xcassets */,
 				4764C006222F65A5001D6DC1 /* Info.plist */,
-				4764C01D222FAA23001D6DC1 /* IRButton.swift */,
 				4733ADA72230249300804465 /* Constants.swift */,
+				470A6FFE2231BFEC00F43D53 /* Currency.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		4764C00D222F8851001D6DC1 /* Resources */ = {
+		4764C00D222F8851001D6DC1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				4764C012222F8C7D001D6DC1 /* NetworkingErrorController.swift */,
 				4764C023222FAFBF001D6DC1 /* AlertController.swift */,
+				4780D2362232475400533634 /* ColorController.swift */,
 			);
-			path = Resources;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4764C00E222F8858001D6DC1 /* Model */ = {
@@ -128,6 +137,7 @@
 			children = (
 				4764C01F222FAD83001D6DC1 /* SignInVC.swift */,
 				4764C021222FAD95001D6DC1 /* BitcoinVC.swift */,
+				477B1FD222310E250040BC26 /* ConversionResultsVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -136,8 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				4764C003222F65A5001D6DC1 /* LaunchScreen.storyboard */,
-				4733ADA9223025FF00804465 /* SignIn.storyboard */,
+				477B1FCB2231020F0040BC26 /* SignIn.storyboard */,
 				4764BFFE222F65A1001D6DC1 /* Main.storyboard */,
+				4764C01D222FAA23001D6DC1 /* IRButton.swift */,
+				4780D238223249FF00533634 /* GradientBackground.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,7 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4733ADAB223025FF00804465 /* SignIn.storyboard in Resources */,
+				477B1FCD2231020F0040BC26 /* SignIn.storyboard in Resources */,
 				4764C005222F65A5001D6DC1 /* LaunchScreen.storyboard in Resources */,
 				4764C002222F65A5001D6DC1 /* Assets.xcassets in Resources */,
 				4764C000222F65A1001D6DC1 /* Main.storyboard in Resources */,
@@ -214,9 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				477B1FD322310E250040BC26 /* ConversionResultsVC.swift in Sources */,
+				4780D2372232475400533634 /* ColorController.swift in Sources */,
 				4764C01B222F99B0001D6DC1 /* BitcoinValue.swift in Sources */,
 				4733ADA82230249300804465 /* Constants.swift in Sources */,
 				4764C022222FAD95001D6DC1 /* BitcoinVC.swift in Sources */,
+				4780D239223249FF00533634 /* GradientBackground.swift in Sources */,
 				4764C01E222FAA23001D6DC1 /* IRButton.swift in Sources */,
 				4764C020222FAD83001D6DC1 /* SignInVC.swift in Sources */,
 				4764C017222F920B001D6DC1 /* NameController.swift in Sources */,
@@ -224,6 +239,7 @@
 				4764C024222FAFBF001D6DC1 /* AlertController.swift in Sources */,
 				4764C013222F8C7D001D6DC1 /* NetworkingErrorController.swift in Sources */,
 				4764BFFB222F65A1001D6DC1 /* AppDelegate.swift in Sources */,
+				470A6FFF2231BFEC00F43D53 /* Currency.swift in Sources */,
 				4764C019222F9757001D6DC1 /* BitcoinValueController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,14 +247,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4733ADA9223025FF00804465 /* SignIn.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4733ADAA223025FF00804465 /* Base */,
-			);
-			name = SignIn.storyboard;
-			sourceTree = "<group>";
-		};
 		4764BFFE222F65A1001D6DC1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -253,6 +261,14 @@
 				4764C004222F65A5001D6DC1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		477B1FCB2231020F0040BC26 /* SignIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				477B1FCC2231020F0040BC26 /* Base */,
+			);
+			name = SignIn.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

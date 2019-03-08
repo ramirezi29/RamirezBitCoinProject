@@ -11,7 +11,6 @@ import Foundation
 class NameController {
     
     static var shared = NameController()
-    
     var names: [Name] = []
     
     init() {
@@ -23,6 +22,8 @@ class NameController {
         names.append(newUser)
         saveToPersistentStorage()
     }
+    
+    // MARK: - Persistent Storage
     
     func filePath() -> URL {
         let fileManager = FileManager.default
